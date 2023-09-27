@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Account {
     private WebDriver driver;
-
     @Before
     public void openBrowser() {
         WebDriverManager.edgedriver().setup();
@@ -23,13 +22,9 @@ public class Account {
         driver.get("https://www.letskodeit.com/practice");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
-
-    @Test
+    }@Test
     public void accountPage(){
-    }
-
-    @After
+    }@After
     public void teaDown() {
         driver.close();
     }
