@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 public class LogIn {
     private WebDriver driver;
-
     @Before
     public void openBrowser() {
         WebDriverManager.edgedriver().setup();
@@ -20,11 +19,9 @@ public class LogIn {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
-
     @Test
     public void logPage(){
     }
-
     @After
     public void teaDown() {
         driver.close();
